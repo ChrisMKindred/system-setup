@@ -1,0 +1,20 @@
+{
+	"WP-Debug-Log": {
+		"scope": "php",
+		"prefix": "wp_error_log",
+		"body": [
+			"error_log( print_r( $1, true ) );"
+		],
+		"description": "Write to the WordPress Error Log."
+	},
+	"box-sizing": {
+		"scope": "css,scss",
+		"prefix": "d-box-sizing",
+		"body": [
+			"* {",
+			"\tbox-sizing: border-box;",
+			"}"
+		],
+		"description": "The first line for all css."
+	}
+}
