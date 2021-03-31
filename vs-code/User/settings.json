@@ -1,16 +1,20 @@
 {
-    "editor.lineHeight": 24,
+    "editor.lineHeight": 26,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 12,
+    "editor.fontSize": 13,
     "editor.rulers": [80],
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    "debug.allowBreakpointsEverywhere": true,
     "terminal.external.osxExec": "iterm.app",
     "terminal.integrated.fontFamily": "Fira Code",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.lineHeight": 1.5,
     "workbench.colorTheme": "Night Owl",
-    "window.zoomLevel": 0,
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.fontAliasing": "antialiased",
     "markdownlint.config": {
         "MD013": false,
         "MD010": {
@@ -26,4 +30,46 @@
     "workbench.settings.editor": "json",
     "breadcrumbs.enabled": false,
     "workbench.activityBar.visible": true,
+    "files.exclude": {
+        "**/.git": false
+   },
+    "launch": {
+        "configurations": [
+            {
+                "name": "xDebug SO",
+                "type": "php",
+                "request": "launch",
+                "port": 9000,
+                "pathMappings": {
+                    "/application/www": "${workspaceRoot}/"
+                }
+            },
+            {
+                "name": "xDebug Homestead",
+                "type": "php",
+                "request": "launch",
+                "pathMappings": {
+                    "/home/vagrant/code/": "/Users/kindred/Code/laravel/"
+                },
+                "port": 9000
+            },
+            {
+                "name": "xDebug Local",
+                "type": "php",
+                "request": "launch",
+                "port": 9000,
+            },
+            {
+                "name": "Launch currently open script",
+                "type": "php",
+                "request": "launch",
+                "program": "${file}",
+                "cwd": "${fileDirname}",
+                "port": 9000
+            }
+        ],
+        "compounds": []
+    },
+    "phpcs.standard": "",
+    "phpcs.executablePath": "vendor/squizlabs/php_codesniffer/bin/phpcs"
 }
