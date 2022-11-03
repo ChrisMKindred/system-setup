@@ -8,20 +8,19 @@ but just documenting the process is good too.
 
 - [1password7](https://1password.com/) *
 - [Alphed 4](https://www.alfredapp.com/)
-- [Dropbox](https://www.dropbox.com/)
+- [Brave Browser](https://brave.com)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Grammerly](https://app.grammarly.com/)
 - [ImageOptim](https://imageoptim.com/mac)
 - [iTerm](https://iterm2.com/)
 - [Local by Flywheel](https://localbyflywheel.com/)
-- [Magnet](https://magnet.crowdcafe.com/) *
 - [Postman](https://www.getpostman.com/)
-- [Sequel Pro](https://github.com/sequelpro/sequelpro)
-- [Sketch](https://www.sketch.com/)
 - [Slack](https://slack.com/)
 - [Things](https://culturedcode.com/things/) *
 - [Transmit](https://panic.com/transmit/)
 - [VS Code](vs-code/readme.md)
+- [Docker](https://docs.docker.com/desktop/mac/apple-silicon/)
+- [Lando]()
+- [ScreenFlow]()
 
 <sup>*Available through the App Store</sup>
 
@@ -64,8 +63,11 @@ mkdir ~/Pictures/screenshots
 defaults write com.apple.screencapture location ~/Pictures/screenshots && killall SystemUIServer
 ```
 
-### Brew Install a few things...
+### Brew Install a few things
 
 ``` sh
-brew cask install alfred google-chrome sketch slack iterm2 postman visual-studio-code
+brew tap homebrew/cask-fonts
+brew install --cask iterm2 alfred slack visual-studio-code 1password droplr zoom brave-browser tableplus transmit font-fira-code-nerd-font tinkerwell postman google-chrome imageoptim postman spaceship php composer nvm local
 ```
+
+Some depending on the chipset (Apple/Intel) some of these apps might need to be reinstalled through their websites.
