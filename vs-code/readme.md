@@ -11,36 +11,5 @@ The settings for vs code are located in `~/Library/Application Support/Code/User
 ## Extensions
 
 ``` sh
-code --install-extension bierner.markdown-mermaid
-code --install-extension bmewburn.vscode-intelephense-client
-code --install-extension bradlc.vscode-tailwindcss
-code --install-extension breezelin.phpstan
-code --install-extension cssho.vscode-svgviewer
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension DotJoshJohnson.xml
-code --install-extension eamodio.gitlens
-code --install-extension EditorConfig.EditorConfig
-code --install-extension formulahendry.auto-close-tag
-code --install-extension formulahendry.auto-rename-tag
-code --install-extension GitHub.codespaces
-code --install-extension GitHub.github-vscode-theme
-code --install-extension jebbs.plantuml
-code --install-extension johnbillion.vscode-wordpress-hooks
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension ms-vsliveshare.vsliveshare
-code --install-extension naumovs.color-highlight
-code --install-extension neilbrayfield.php-docblocker
-code --install-extension PKief.material-icon-theme
-code --install-extension redhat.vscode-yaml
-code --install-extension sdras.night-owl
-code --install-extension SimplyDanny.modelica
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension Tyriar.sort-lines
-code --install-extension valeryanm.vscode-phpsab
-code --install-extension vincaslt.highlight-matching-tag
-code --install-extension Vue.volar
-code --install-extension wayou.vscode-todo-highlight
-code --install-extension whatwedo.twig
-code --install-extension wwm.better-align
-code --install-extension xdebug.php-debug
+code --install-extension bierner.markdown-mermaid --install-extension bmewburn.vscode-intelephense-client --install-extension bradlc.vscode-tailwindcss --install-extension breezelin.phpstan --install-extension cssho.vscode-svgviewer --install-extension DavidAnson.vscode-markdownlint --install-extension DotJoshJohnson.xml --install-extension eamodio.gitlens --install-extension EditorConfig.EditorConfig --install-extension formulahendry.auto-close-tag --install-extension formulahendry.auto-rename-tag --install-extension GitHub.codespaces --install-extension GitHub.github-vscode-theme --install-extension jebbs.plantuml --install-extension johnbillion.vscode-wordpress-hooks --install-extension ms-vscode-remote.remote-containers --install-extension ms-vsliveshare.vsliveshare --install-extension naumovs.color-highlight --install-extension neilbrayfield.php-docblocker --install-extension PKief.material-icon-theme --install-extension redhat.vscode-yaml --install-extension sdras.night-owl --install-extension SimplyDanny.modelica --install-extension streetsidesoftware.code-spell-checker --install-extension Tyriar.sort-lines --install-extension valeryanm.vscode-phpsab --install-extension vincaslt.highlight-matching-tag --install-extension Vue.volar --install-extension wayou.vscode-todo-highlight --install-extension whatwedo.twig --install-extension wwm.better-align --install-extension xdebug.php-debug
 ```
