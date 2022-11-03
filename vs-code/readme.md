@@ -4,7 +4,11 @@ Make sure code is installed on the system by following the instructions in [../r
 
 ## Settings
 
-Copy the `User/settings.json` over the current `settings.json` in `Code->preferences->settings` menu item or `⌘,`.
+Copy the `User/settings.json` over the current `settings.json` in `Code -> Preferences -> Settings` menu item or `⌘,`.
+
+## Snippets
+
+Copy the contents of the `User/myGlobal.code-snippets` into the global snippets file in the `Code -> Preferences -> Configure User Snippets` menu item.
 
 ## Extensions
 
