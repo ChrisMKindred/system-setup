@@ -1,12 +1,10 @@
 # [VS Code](https://code.visualstudio.com/)
 
-```sh
-brew cask install visual-studio-code
-```
+Make sure code is installed on the system by following the instructions in [../readme.md](../readme.md "Root Readme").
 
 ## Settings
 
-The settings for vs code are located in `~/Library/Application Support/Code/User/`. Copy the User folder from this repo there.
+Copy the `User/settings.json` over the current `settings.json` in `Code->preferences->settings` menu item or `⌘,`.
 
 ## Extensions
 
