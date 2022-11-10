@@ -29,7 +29,7 @@ but just documenting the process is good too.
 - Brew
 - [Fira-Code Font](https://github.com/tonsky/FiraCode)
 - Composer
-- zsh & oh-my-zsh
+- zsh & Spaceship
 - Git
 - NPM
 - homestead
@@ -38,32 +38,22 @@ but just documenting the process is good too.
 
 ## OS Settings
 
-- Set the Dock to `Automatically hide and show the dock`.  
-- Set the icons to be smallest possible size.
-- Don't `Animate opening applications`
-
-#### Remove Dock Show Delay
-
-One of the issues with hiding the dock is the delay that it has when showing. The below command removes that delay.
-
 ``` sh
-defaults write com.apple.Dock autohide-delay -float 0; killall Dock
-```
+# Removes Dock Show Delay
+defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock 
 
-#### Hold Down key for repeat
+# Show Hidden Files
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
 
-``` sh
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-```
+# Keep Folders On Top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
 
-#### Custom screenshot path
-
-``` sh
+# Custom screenshot path
 mkdir ~/Pictures/screenshots
 defaults write com.apple.screencapture location ~/Pictures/screenshots && killall SystemUIServer
 ```
 
-### Brew Install a few things
+## Brew Install a few things
 
 ``` sh
 brew tap homebrew/cask-fonts
