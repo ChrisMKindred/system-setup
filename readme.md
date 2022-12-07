@@ -57,7 +57,7 @@ defaults write com.apple.screencapture location ~/Pictures/screenshots && killal
 
 ``` sh
 brew tap homebrew/cask-fonts
-brew install --cask iterm2 alfred slack visual-studio-code 1password droplr zoom brave-browser tableplus transmit font-fira-code-nerd-font tinkerwell postman google-chrome imageoptim postman spaceship php composer nvm local
+brew install --cask iterm2 alfred slack visual-studio-code 1password droplr zoom brave-browser tableplus transmit font-fira-code-nerd-font tinkerwell postman google-chrome imageoptim postman spaceship php composer nvm local ansible
 ```
 
 Some depending on the chipset (Apple/Intel) some of these apps might need to be reinstalled through their websites.
