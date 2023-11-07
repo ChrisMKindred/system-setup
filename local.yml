@@ -1,7 +1,11 @@
 ---
-  - hosts: localhost
-    connection: local
-    tasks: 
-    - name: Ping
-      ansible.builtin.ping:
-        data: pong
+- hosts: localhost
+  connection: local
+  tasks: 
+  - name: Ping
+    ansible.builtin.ping:
+      data: pong
+  
+  - name: Test
+    debug:
+      msg: "Hello"
