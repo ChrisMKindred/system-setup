@@ -27,6 +27,7 @@
   - name: Updating Homebrew
     homebrew:
       update_homebrew: true
+      upgrade: true
     when: homebrew_check.stat.exists
   
   - name: Test
