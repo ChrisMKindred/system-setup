@@ -30,6 +30,8 @@
       upgrade: true
     when: homebrew_check.stat.exists
   
-  - name: Test
-    debug:
-      msg: "Hello"
+  - name: Install tmux
+    package:
+      name: tmux
+      state: present
+    tags: tmuxc
