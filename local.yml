@@ -5,6 +5,10 @@
     install_homebrew_if_missing: false
 
   pre_tasks:
+
+  - name: Install Command Line Tools
+    shell: xcode-select --install
+
   - name: Ensuring Homebrew Is Installed
     stat:
       path: /usr/local/bin/brew
