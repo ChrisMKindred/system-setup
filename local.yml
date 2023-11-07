@@ -1,8 +1,8 @@
 ---
-- hosts: localhost
-  connection: local
-  become: true
-  tasks: 
-  - name: Ping
-        ansible.builtin.ping:
-          data: pong
+  - hosts: localhost
+    connection: local
+    become: true
+    tasks: 
+    - name: Ping
+      ansible.builtin.ping:
+        data: pong
