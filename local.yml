@@ -25,9 +25,10 @@
       - install_homebrew_if_missing  
 
   tasks: 
-  - name: Ping
-    ansible.builtin.ping:
-      data: pong
+  - name: Updating Homebrew
+    homebrew:
+      update_homebrew: true
+    when: homebrew_check.stat.exists
   
   - name: Test
     debug:
