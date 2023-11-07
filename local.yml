@@ -1,8 +1,7 @@
 ---
-- hosts: localhost
+- hosts: all
   connection: local
   become: true
-
   tasks: 
   - name: Testing
     ansible.builtin.debug:
