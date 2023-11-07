@@ -2,6 +2,21 @@
 - hosts: localhost
   connection: local
   become: true
+  vars: 
+    install_homebrew_if_missing: false
+
+  pre_tasks:
+  - name: Ensuring Homebrew Is Installed
+    stat:
+      path: /usr/local/bin/brew
+    register: homebrew_check
+
+  - name: Fail if homebrew is not installed and install_homebrew_if_missing is False
+    fail: 
+      msg: Homebrew is missing...Install from https://brew.sh/
+    when:
+      - not homebrew_check.stat.exists
+      - not install_homebrew_if_missing
   
   tasks: 
   - name: Ping
