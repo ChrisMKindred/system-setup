@@ -17,7 +17,13 @@
     when:
       - not homebrew_check.stat.exists
       - not install_homebrew_if_missing
-  
+
+  - name: Installing Homebrew
+    shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    when:
+      - not homebrew_check.stat.exists
+      - install_homebrew_if_missing  
+
   tasks: 
   - name: Ping
     ansible.builtin.ping:
