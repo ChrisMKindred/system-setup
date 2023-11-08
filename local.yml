@@ -57,13 +57,12 @@
   - name: Install core packages via brew casks
     community.general.homebrew_cask:
       name: "{{ item }}"
-      state: present
+      state: installed
     ignore_errors: yes
     with_items:
       - 1password
       - alfred
       - arc
-      - composer
       - droplr
       - font-fira-code-nerd-font
       - iterm2
