@@ -56,5 +56,18 @@
 
   - name: Install core packages via brew casks
     homebrew:
-      name: 1password alfred arc
-      state: installed      
+      name: 
+        - 1password
+        - alfred
+        - arc
+        - droplr
+        - font-fira-code-nerd-font
+        - iterm2
+        - nvm 
+        - postman
+        - slack
+        - tableplus
+        - transmit
+        - visual-studio-code
+        - zoom
+      state: present      
