@@ -55,21 +55,8 @@
       ]
 
   - name: Install core packages via brew casks
-    community.general.homebrew_cask:
-      name: "{{ item }}"
+    homebrew:
+      name: |
+        1password  
+        alfred 
       state: installed
-    ignore_errors: yes
-    with_items:
-      - 1password
-      - alfred
-      - arc
-      - droplr
-      - font-fira-code-nerd-font
-      - iterm2
-      - nvm 
-      - postman
-      - slack
-      - tableplus
-      - transmit
-      - visual-studio-code
-      - zoom
