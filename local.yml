@@ -72,3 +72,11 @@
         - zoom
       state: present
       accept_external_apps: true
+
+- name: Install core packages via brew
+    community.general.homebrew:
+      name: 
+        - nvm 
+        - composer
+      state: present
+      accept_external_apps: true
