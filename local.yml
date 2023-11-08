@@ -70,4 +70,5 @@
         - transmit
         - visual-studio-code
         - zoom
-      state: present      
+      state: present
+      accept_external_apps: true
