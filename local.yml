@@ -57,6 +57,6 @@
   - name: Install core packages via brew casks
     homebrew:
       name: |
-        1password  
+        1password |
         alfred 
       state: installed
