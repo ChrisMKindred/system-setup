@@ -8,7 +8,7 @@
   - name: Check for Command Line Tools
     shell: xcode-select -p | echo $?
     register: xcode_output
-    ignore_errors: yes
+    changed_when: False
 
   - name: Install Command Line Tools
     fail: 
