@@ -78,4 +78,3 @@
         - nvm 
         - composer
       state: present
-      accept_external_apps: true
