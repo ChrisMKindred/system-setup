@@ -62,8 +62,13 @@
         - arc
         - droplr
         - font-fira-code-nerd-font
+        - google-chrome
+        - imageOptim
         - iterm2
+        - local
+        - orbstack
         - postman
+        - screenflow
         - slack
         - tableplus
         - transmit
