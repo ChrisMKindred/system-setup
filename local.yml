@@ -46,3 +46,29 @@
       name: tmux
       state: present
     tags: tmuxc
+
+- name: 'add custom homebrew repos'
+  community.general.homebrew_tap:
+    name: [
+      homebrew/cask-fonts,
+    ]
+
+- name: Install core packages via brew casks
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+  ignore_errors: yes
+  with_items:
+    - 1password
+    - alfred
+    - droplr
+    - iterm2
+    - slack
+    - visual-studio-code
+    - zoom
+    - tableplus
+    - transmit
+    - font-fira-code-nerd-font
+    - postman
+    - arc
+    - composer
+    - nvm 
