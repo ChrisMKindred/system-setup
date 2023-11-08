@@ -13,7 +13,7 @@
     fail: 
       msg: Run xcode-select --install
     when:
-      - xcode_output.stdout == 0
+      - xcode_output.stdout == "0"
 
   - name: Ensuring Homebrew Is Installed
     stat:
