@@ -55,7 +55,7 @@
       ]
 
   - name: Install core packages via brew casks
-    homebrew:
+    community.general.homebrew_cask:
       name: 
         - 1password
         - alfred
