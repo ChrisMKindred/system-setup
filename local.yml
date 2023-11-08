@@ -5,9 +5,15 @@
     install_homebrew_if_missing: false
 
   pre_tasks:
+  - name: Check for Command Line Tools
+    shell: xcode-select -p; echo $?
+    register: xcode_output
 
   - name: Install Command Line Tools
-    shell: xcode-select --install
+    fail: 
+      msg: Run xcode-select --install
+    when:
+      - xcode_output.stdout != 2
 
   - name: Ensuring Homebrew Is Installed
     stat:
