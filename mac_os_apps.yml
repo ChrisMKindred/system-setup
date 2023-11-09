@@ -24,7 +24,7 @@
 
   tasks:
   - name: Updating Homebrew
-    homebrew:
+    community.general.homebrew:
       update_homebrew: true
       upgrade: true
     when: homebrew_check.stat.exists
