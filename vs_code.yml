@@ -81,7 +81,7 @@
 
   - name: Move VS Code Config
     copy:
-      src: files/vs-code-settings.json
+      src: /files/vs-code-settings.json
       dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/settings.json
       owner: "{{ lookup('env', 'USER') }}"
-      force: no
+      force: yes
