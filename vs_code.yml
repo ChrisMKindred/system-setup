@@ -85,3 +85,10 @@
       dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/settings.json
       owner: "{{ lookup('env', 'USER') }}"
       force: yes
+
+  - name: Move VS Code Snippets
+    copy:
+      src: ./files/vs-code-snippets.code-snippets
+      dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/snippets/myGlobal.code-snippets
+      owner: "{{ lookup('env', 'USER') }}"
+      force: yes
