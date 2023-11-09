@@ -2,8 +2,8 @@
 - hosts: localhost
   connection: local
   become: false
-  vars: 
-    install_homebrew_if_missing: false
+
+- import_playbook: homebrew.yml
 
   pre_tasks:
   - name: Check for Command Line Tools
@@ -17,69 +17,9 @@
     when:
       - xcode_output.stdout != "0"
 
-  - name: Ensuring Homebrew Is Installed
-    stat:
-      path: /usr/local/bin/brew
-    register: homebrew_check
-
-  - name: Fail if homebrew is not installed and install_homebrew_if_missing is False
-    fail: 
-      msg: Homebrew is missing...Install from https://brew.sh/
-    when:
-      - not homebrew_check.stat.exists
-      - not install_homebrew_if_missing
-
-  - name: Installing Homebrew
-    shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    when:
-      - not homebrew_check.stat.exists
-      - install_homebrew_if_missing  
-
   tasks: 
-  - name: Updating Homebrew
-    homebrew:
-      update_homebrew: true
-      upgrade: true
-    when: homebrew_check.stat.exists
-  
   - name: Install tmux
     package:
       name: tmux
       state: present
     tags: tmuxc
-
-  - name: 'add custom homebrew repos'
-    community.general.homebrew_tap:
-      name: [
-        homebrew/cask-fonts,
-      ]
-
-  - name: Install core packages via brew casks
-    community.general.homebrew_cask:
-      name: 
-        - 1password
-        - alfred
-        - arc
-        - droplr
-        - font-fira-code-nerd-font
-        - google-chrome
-        - imageOptim
-        - iterm2
-        - local
-        - orbstack
-        - postman
-        - screenflow
-        - slack
-        - tableplus
-        - transmit
-        - visual-studio-code
-        - zoom
-      state: present
-      accept_external_apps: true
-    
-  - name: Install core packages via brew
-    community.general.homebrew:
-      name: 
-        - nvm 
-        - composer
-      state: present
