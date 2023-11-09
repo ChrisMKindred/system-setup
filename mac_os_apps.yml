@@ -24,9 +24,11 @@
 
   tasks:
   - name: Updating Homebrew
-    community.general.mas:
-      - 1569813296
-
+    homebrew:
+      update_homebrew: true
+      upgrade: true
+    when: homebrew_check.stat.exists
+    
   # - name: Test
   #   community.general.mas:
   #     - 1569813296
