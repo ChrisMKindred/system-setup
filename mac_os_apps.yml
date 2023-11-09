@@ -34,8 +34,8 @@
   #     name: 
   #       - mas
 
-  - name: Install Mac App Store Apps 
-    community.general.mas: # Use `mas search 'APP_NAME'` to find id.
-      - 1569813296 # 1Password for Safari
-      - 904280696 # Things 3
-      - 441258766 # Magnet
+  # - name: Install Mac App Store Apps 
+  #   community.general.mas: # Use `mas search 'APP_NAME'` to find id.
+  #     - 1569813296 # 1Password for Safari
+  #     - 904280696 # Things 3
+  #     - 441258766 # Magnet
