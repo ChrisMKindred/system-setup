@@ -1,6 +1,7 @@
 ---
 - import_playbook: homebrew.yml
 - import_playbook: command_line.yml
+- import_playbook: vs_code.yml
 
 
 

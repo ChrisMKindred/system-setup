@@ -1,0 +1,71 @@
+---
+- hosts: localhost
+  connection: local
+  become: false
+
+  pre_tasks:
+  - name: Ensuring Homebrew Is Installed
+    stat:
+      path: /usr/local/bin/brew
+    register: homebrew_check
+
+  - name: Fail if homebrew is not installed and install_homebrew_if_missing is False
+    fail: 
+      msg: Homebrew is missing...Install from https://brew.sh/
+    when:
+      - not homebrew_check.stat.exists
+      - not install_homebrew_if_missing
+
+  - name: Installing Homebrew
+    shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    when:
+      - not homebrew_check.stat.exists
+      - install_homebrew_if_missing 
+
+  tasks:
+  - name: Updating Homebrew
+    homebrew:
+      update_homebrew: true
+      upgrade: true
+    when: homebrew_check.stat.exists
+  
+  - name: Install core packages via brew casks
+    community.general.homebrew_cask:
+      name: visual-studio-code
+      state: present
+      accept_external_apps: true
+
+  - name: Install Extensions
+    shell: |
+      code --install-extension bierner.markdown-mermaid |
+      bmewburn.vscode-intelephense-client |
+      bradlc.vscode-tailwindcss |
+      breezelin.phpstan |
+      cssho.vscode-svgviewer |
+      DavidAnson.vscode-markdownlint |
+      DotJoshJohnson.xml |
+      eamodio.gitlens |
+      EditorConfig.EditorConfig |
+      formulahendry.auto-close-tag |
+      formulahendry.auto-rename-tag |
+      GitHub.codespaces |
+      GitHub.github-vscode-theme |
+      jebbs.plantuml |
+      johnbillion.vscode-wordpress-hooks |
+      ms-vscode-remote.remote-containers |
+      ms-vsliveshare.vsliveshare |
+      naumovs.color-highlight |
+      neilbrayfield.php-docblocker |
+      PKief.material-icon-theme |
+      redhat.vscode-yaml |
+      sdras.night-owl |
+      SimplyDanny.modelica |
+      streetsidesoftware.code-spell-checker |
+      Tyriar.sort-lines |
+      valeryanm.vscode-phpsab |
+      vincaslt.highlight-matching-tag |
+      Vue.volar |
+      wayou.vscode-todo-highlight |
+      whatwedo.twig |
+      wwm.better-align |
+      xdebug.php-debug
