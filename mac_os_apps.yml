@@ -23,15 +23,13 @@
       - install_homebrew_if_missing 
 
   tasks:
-  # - name: Updating Homebrew
-  #   homebrew:
-  #     update_homebrew: true
-  #     upgrade: true
-  #   when: homebrew_check.stat.exists
-
-  - name: Test
+  - name: Updating Homebrew
     community.general.mas:
       - 1569813296
+
+  # - name: Test
+  #   community.general.mas:
+  #     - 1569813296
   # - name: Install MAS via BREW
   #   community.general.homebrew:
   #     name: 
