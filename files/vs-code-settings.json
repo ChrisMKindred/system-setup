@@ -23,8 +23,6 @@
     "workbench.sideBar.location": "right",
     "explorer.openEditors.visible": 0,
     "workbench.settings.editor": "json",
-    "breadcrumbs.enabled": false,
-    "workbench.activityBar.visible": true,
     "files.exclude": {
         "**/.git": false
    },
@@ -93,10 +91,8 @@
         ],
         "compounds": []
     },
-    "svgviewer.showzoominout": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.editor.untitled.hint": "hidden",
-    "intelephense.environment.phpVersion": "7.4.22",
+    "intelephense.environment.phpVersion": "8.0",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
@@ -107,7 +103,7 @@
     "intelephense.environment.shortOpenTag": false,
     "intelephense.format.braces": "k&r",
     "editor.renderWhitespace": "none",
-    "php.validate.executablePath": "/usr/local/bin/php",
+    "php.validate.executablePath": "/opt/homebrew/bin/php",
     "json.maxItemsComputed": 15000,
     "intelephense.phpdoc.returnVoid": false,
     "php-docblocker.returnVoid": false,
@@ -117,9 +113,27 @@
     "[php]": {
         "editor.defaultFormatter": "valeryanm.vscode-phpsab"
     },
-    "cSpell.userWords": [
-        "kwcusgs",
-        "Shortcode",
-        "USGS"
+    "redhat.telemetry.enabled": false,
+    "phpstan.autoloadFile": "",
+    "phpstan.configuration": "",
+    "phpstan.level": "config",
+    "phpstan.memoryLimit": "-1M",
+    "phpstan.noProgress": false,
+    "[html]": {
+        "editor.defaultFormatter": "mohd-akram.vscode-html-format"
+    },
+    "intelephense.telemetry.enabled": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "workbench.editor.empty.hint": "hidden",
+    "cSpell.enableFiletypes": [
+        "md"
     ],
+    "cSpell.userWords": [
+        "Dokku",
+        "Lando",
+        "lighthouserc",
+        "lndo",
+        "Slic"
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
 }

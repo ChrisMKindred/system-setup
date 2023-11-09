@@ -56,13 +56,18 @@
     - GitHub.github-vscode-theme
     - jebbs.plantuml
     - johnbillion.vscode-wordpress-hooks
+    - mohd-akram.vscode-html-format
+    - ms-python.python
+    - ms-python.vscode-pylance
     - ms-vscode-remote.remote-containers
     - ms-vsliveshare.vsliveshare
     - naumovs.color-highlight
     - neilbrayfield.php-docblocker
+    - phproberto.vscode-php-getters-setters
     - PKief.material-icon-theme
     - redhat.vscode-yaml
     - sdras.night-owl
+    - SimonSiefke.svg-preview
     - SimplyDanny.modelica
     - streetsidesoftware.code-spell-checker
     - Tyriar.sort-lines
@@ -73,4 +78,10 @@
     - whatwedo.twig
     - wwm.better-align
     - xdebug.php-debug
-    
+
+  - name: Move VS Code Config
+    copy:
+      src: files/vs-code-settings.json
+      dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/settings.json
+    owner: "{{ lookup('env', 'USER') }}"
+    force: no
