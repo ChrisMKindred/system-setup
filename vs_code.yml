@@ -36,7 +36,7 @@
       accept_external_apps: true
 
   - name: Install Extensions
-    shell: code --install-extension {{ items }}
+    shell: code --install-extension {{ item }}
     with_items:
     - bierner.markdown-mermaid
     - bmewburn.vscode-intelephense-client
