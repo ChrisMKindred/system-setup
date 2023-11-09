@@ -37,6 +37,8 @@
 
   - name: Install Extensions
     shell: code --install-extension {{ item }}
+    register: code_extension
+    changed_when: "'was successfully installed' in code_extension.stdout"
     with_items:
     - bierner.markdown-mermaid
     - bmewburn.vscode-intelephense-client
@@ -71,3 +73,4 @@
     - whatwedo.twig
     - wwm.better-align
     - xdebug.php-debug
+    
