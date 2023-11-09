@@ -29,10 +29,10 @@
       upgrade: true
     when: homebrew_check.stat.exists
   
-  - name: Install core packages via brew casks
-    community.general.homebrew:
-      name: 
-        - mas
+  # - name: Install MAS via BREW
+  #   community.general.homebrew:
+  #     name: 
+  #       - mas
 
   - name: Install Mac App Store Apps 
     community.general.mas: # Use `mas search 'APP_NAME'` to find id.
