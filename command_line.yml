@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  connection: local
+  become: false
+
+  pre_tasks:
+  - name: Check for Command Line Tools
+    shell: xcode-select -p | echo $?
+    register: xcode_output
+    changed_when: False
+
+  - name: Install Command Line Tools
+    fail: 
+      msg: Command Line Tools should be installed...Run xcode-select --install
+    when:
+      - xcode_output.stdout != "0"

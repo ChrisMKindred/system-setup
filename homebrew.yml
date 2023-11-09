@@ -36,7 +36,7 @@
       name: [
         homebrew/cask-fonts,
       ]
-      
+
   - name: Install core packages via brew casks
     community.general.homebrew_cask:
       name: 
@@ -54,6 +54,7 @@
         - screenflow
         - slack
         - tableplus
+        - tmux
         - transmit
         - visual-studio-code
         - zoom
