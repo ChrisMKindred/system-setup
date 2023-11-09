@@ -64,6 +64,7 @@
     community.general.homebrew:
       name: 
         - composer
+        - mas
         - nvm 
         - tmux
       state: present
