@@ -28,9 +28,9 @@
       update_homebrew: true
       upgrade: true
     when: homebrew_check.stat.exists
-  
-  - name: Install mac app store Apps
-    mas: 
+    
+  - name: Test
+    community.general.mas:
       - 1569813296
   # - name: Install MAS via BREW
   #   community.general.homebrew:
