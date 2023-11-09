@@ -1,0 +1,41 @@
+---
+- hosts: localhost
+  connection: local
+  become: false
+
+  pre_tasks:
+  - name: Ensuring Homebrew Is Installed
+    stat:
+      path: /usr/local/bin/brew
+    register: homebrew_check
+
+  - name: Fail if homebrew is not installed and install_homebrew_if_missing is False
+    fail: 
+      msg: Homebrew is missing...Install from https://brew.sh/
+    when:
+      - not homebrew_check.stat.exists
+      - not install_homebrew_if_missing
+
+  - name: Installing Homebrew
+    shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    when:
+      - not homebrew_check.stat.exists
+      - install_homebrew_if_missing 
+
+  tasks:
+  - name: Updating Homebrew
+    homebrew:
+      update_homebrew: true
+      upgrade: true
+    when: homebrew_check.stat.exists
+  
+  - name: Install core packages via brew casks
+    community.general.homebrew:
+      name: mas
+      state: present
+
+  - name: Install Mac App Store Apps 
+    community.general.mas: # Use `mas search 'APP_NAME'` to find id.
+      - 1569813296 # 1Password for Safari
+      - 904280696 # Things 3
+      - 441258766 # Magnet
