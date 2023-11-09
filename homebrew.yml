@@ -54,7 +54,6 @@
         - screenflow
         - slack
         - tableplus
-        - tmux
         - transmit
         - visual-studio-code
         - zoom
@@ -64,6 +63,7 @@
   - name: Install core packages via brew
     community.general.homebrew:
       name: 
-        - nvm 
         - composer
+        - nvm 
+        - tmux
       state: present
