@@ -66,5 +66,6 @@
         - composer
         - mas
         - nvm 
+        - python3
         - tmux
       state: present
