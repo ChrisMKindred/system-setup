@@ -66,6 +66,8 @@
         - composer
         - mas
         - nvm 
+        - php@8.0
+        - php@8.1
         - python3
         - tmux
       state: present
