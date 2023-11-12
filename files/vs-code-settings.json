@@ -103,7 +103,7 @@
     "intelephense.environment.shortOpenTag": false,
     "intelephense.format.braces": "k&r",
     "editor.renderWhitespace": "none",
-    "php.validate.executablePath": "/opt/homebrew/bin/php",
+    "php.validate.executablePath": "/usr/local/bin/php",
     "json.maxItemsComputed": 15000,
     "intelephense.phpdoc.returnVoid": false,
     "php-docblocker.returnVoid": false,
