@@ -65,6 +65,7 @@
     community.general.homebrew:
       name: 
         - composer
+        - jq
         - mas
         - nvm 
         - php
