@@ -1,0 +1,24 @@
+---
+- hosts: localhost
+  connection: local
+  become: false
+
+  tasks:
+  - name: Install Oh My ZSH
+    shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    args:
+      creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
+  
+  - name: "Create a default ZSH configuration"
+    template:
+      src: files/.zshrc.j2
+      dest: /Users/{{ lookup('env', 'USER') }}/.zshrc
+      owner: "{{ lookup('env', 'USER') }}"
+      force: yes
+
+  - name: "Copy Aliases File"
+    template:
+      src: files/.aliases.zsh.j2
+      dest: /Users/{{ lookup('env', 'USER') }}/.aliases.zsh
+      owner: "{{ lookup('env', 'USER') }}"
+      force: yes
