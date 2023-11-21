@@ -54,6 +54,7 @@
     - formulahendry.auto-rename-tag
     - GitHub.codespaces
     - GitHub.github-vscode-theme
+    - hashicorp.terraform
     - jebbs.plantuml
     - johnbillion.vscode-wordpress-hooks
     - mohd-akram.vscode-html-format
