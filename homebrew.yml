@@ -71,5 +71,6 @@
         - nvm 
         - php
         - python3
+        - terraform
         - tmux
       state: present
