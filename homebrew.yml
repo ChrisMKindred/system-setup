@@ -65,7 +65,7 @@
   - name: Install core packages via brew
     community.general.homebrew:
       name: 
-        - aws
+        - awscli
         - composer
         - jq
         - mas
