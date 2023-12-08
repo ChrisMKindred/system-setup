@@ -20,4 +20,4 @@
     shell: |
      /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
     when:
-      -  ShowSpotlightSearch.stdout = "true"
+      -  ShowSpotlightSearch.stdout == "true"
