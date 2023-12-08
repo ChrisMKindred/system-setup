@@ -10,3 +10,14 @@
         - 1569813296 # 1Password for Safari
         - 904280696 # Things 3
         - 441258766 # Magnet
+
+  - name: Get Show Spotlight Search Value
+    shell: /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Print AppleSymbolicHotKeys:64:enabled"
+    register: ShowSpotlightSearch
+
+  
+  - name: Set Plist Things
+    shell: |
+     /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
+    when:
+      -  ShowSpotlightSearch.stdout = "true"
