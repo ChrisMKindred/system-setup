@@ -17,9 +17,8 @@
 
   - name: debug
     debug: 
-      msg: ShowSpotlightSearch = "{{ShowSpotlightSearch.stdout}}"
+      var: ShowSpotlightSearch
 
-  
   - name: Set Plist Things
     shell: |
      /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
