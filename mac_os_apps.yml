@@ -14,10 +14,12 @@
   - name: Get Show Spotlight Search Value
     shell: /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Print AppleSymbolicHotKeys:64:enabled"
     register: ShowSpotlightSearch
+    changed_when: False
 
   - name: debug
     debug: 
       var: ShowSpotlightSearch
+      verbosity: 2
 
   - name: Set Plist Things
     shell: |
