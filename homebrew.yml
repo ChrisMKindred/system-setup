@@ -6,9 +6,9 @@
     install_homebrew_if_missing: false
 
   pre_tasks:
-  - name: Ensuring Homebrew Is Installed
+  - name: Ensuring Homebrew Is Installed (Apple)
     stat:
-      path: /usr/local/bin/brew
+      path: /opt/homebrew/bin/brew
     register: homebrew_check
 
   - name: Fail if homebrew is not installed and install_homebrew_if_missing is False
