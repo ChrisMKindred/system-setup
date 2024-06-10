@@ -72,4 +72,5 @@
         - python3
         - terraform
         - tmux
+        - wp-cli
       state: present
