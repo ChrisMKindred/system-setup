@@ -20,6 +20,30 @@
       value: 0
     notify: Reload Dock
 
+  - name: Set dock magnification
+    community.general.osx_defaults:
+      domain: com.apple.dock
+      key: magnification
+      type: bool
+      value: true
+    notify: Reload Dock
+
+  - name: Set Magnification Size
+    community.general.osx_defaults:
+      domain: com.apple.dock
+      key: largesize
+      type: inst
+      value: 128
+    notify: Reload Dock
+  
+  - name: Set default tilesize
+    community.general.osx_defaults:
+      domain: com.apple.dock
+      key: tilesize
+      type: int
+      value: 16
+    notify: Reload Dock
+
   handlers:
     - name: Reload Dock
       shell: killall -u {{ lookup('env', 'USER') }} cfprefsd && killall Dock 
