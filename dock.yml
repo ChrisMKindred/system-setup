@@ -11,6 +11,8 @@
       type: bool
       value: true
       state: present
+    changed_when: True
+    notify: Reload Dock
 
   - name: Set autohide-delay to 0
     community.general.osx_defaults:
@@ -19,4 +21,9 @@
       type: float
       value: 0
       state: present
-      
+    changed_when: True
+    notify: Reload Dock
+
+  handlers:
+    - name: Reload Dock
+      shell: killall Dock
