@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  connection: local
+  become: false
+
+  tasks:
+  - name: Set autohide to true
+    community.general.osx_defaults:
+      domain: com.apple.dock
+      key: autohide
+      type: bool
+      value: true
+      state: present
+
+  - name: Set autohide-delay to 0
+    community.general.osx_defaults:
+      domain: com.apple.dock
+      key: autohide-delay
+      type: float
+      value: 0
+      state: present
+      
