@@ -32,7 +32,7 @@
     community.general.osx_defaults:
       domain: com.apple.dock
       key: largesize
-      type: inst
+      type: int
       value: 128
     notify: Reload Dock
   
