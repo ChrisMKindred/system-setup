@@ -10,7 +10,6 @@
       key: autohide
       type: bool
       value: true
-      state: present
     changed_when: True
     notify: Reload Dock
 
@@ -20,7 +19,6 @@
       key: autohide-delay
       type: float
       value: 0
-      state: present
     changed_when: True
     notify: Reload Dock
 
