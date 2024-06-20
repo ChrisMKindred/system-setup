@@ -3,10 +3,6 @@
   connection: local
   become: false
 
-  pre_tasks: 
-  - name: Clear OSX Plist Cache
-    shell: killall -u {{ lookup('env', 'USER') }} cfprefsd
-
   tasks:
   - name: Set autohide to true
     community.general.osx_defaults:
@@ -30,4 +26,4 @@
 
   handlers:
     - name: Reload Dock
-      shell: killall Dock
+      shell: killall -u {{ lookup('env', 'USER') }} cfprefsd && killall Dock 
