@@ -25,7 +25,7 @@
 
   - name: "Setup Cobalt2 theme"
     template:
-      src: files/cobalt2.zsh-theme
+      src: .files/cobalt2.zsh-theme
       dest: /Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/themes/
       owner: "{{ lookup('env', 'USER') }}"
       force: yes
