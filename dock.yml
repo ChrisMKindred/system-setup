@@ -10,7 +10,6 @@
       key: autohide
       type: bool
       value: true
-    changed_when: True
     notify: Reload Dock
 
   - name: Set autohide-delay to 0
@@ -19,7 +18,6 @@
       key: autohide-delay
       type: float
       value: 0
-    changed_when: True
     notify: Reload Dock
 
   handlers:
