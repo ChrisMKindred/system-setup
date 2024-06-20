@@ -44,6 +44,14 @@
       value: 16
     notify: Reload Dock
 
+  - name: Set minimize to application value
+    community.general.osx_defaults:
+      domain: com.apple.dock
+      key: minimize-to-application
+      type: bool
+      value: true
+    notify: Reload Dock
+
   handlers:
     - name: Reload Dock
       shell: killall -u {{ lookup('env', 'USER') }} cfprefsd && killall Dock 
