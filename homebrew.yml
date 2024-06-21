@@ -19,7 +19,6 @@
     homebrew:
       update_homebrew: true
       upgrade: true
-    when: homebrew_check.stat.exists
 
   - name: Install core packages via brew casks
     community.general.homebrew_cask:
