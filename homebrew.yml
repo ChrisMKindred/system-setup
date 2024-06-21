@@ -7,7 +7,6 @@
     shell: NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     args:
       creates: /usr/local/bin/brew
-    become: yes
 
   # Required by Lando
   - name: Ensure Rosetta 2 is installed
