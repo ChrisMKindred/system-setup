@@ -97,21 +97,3 @@
       dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/snippets/myGlobal.code-snippets
       owner: "{{ lookup('env', 'USER') }}"
       force: yes
-
-  - name: Ensure iTerm2 color DynamicProfiles directory exists
-    file:
-      path: ~/Library/Application Support/iTerm2/DynamicProfiles/
-      state: directory
-      mode: '0755'
-
-  - name: Copy JSON profile to DynamicProfiles directory
-    copy:
-      src: files/Profiles.json
-      dest: ~/Library/Application Support/iTerm2/DynamicProfiles/Profiles.json
-      mode: '0644'
-
-  - name: Reload iTerm2 preferences
-    shell: osascript -e 'tell application "iTerm2" to reload preferences'
-    args:
-      executable: /bin/bash
-
