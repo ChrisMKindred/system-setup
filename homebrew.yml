@@ -25,6 +25,13 @@
       - install_homebrew_if_missing  
 
   tasks:
+  # Required by Lando
+  - name: Ensure Rosetta 2 is installed
+    shell: |
+      /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+    args:
+      creates: /Library/Apple/usr/share/rosetta
+
   - name: Updating Homebrew
     homebrew:
       update_homebrew: true
@@ -48,6 +55,7 @@
         - orbstack
         - postman
         - screenflow
+        - lando
         - slack
         - tableplus
         - thingsmacsandboxhelper
