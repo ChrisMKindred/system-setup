@@ -116,3 +116,5 @@
         set colorFile to POSIX file "~/Library/Application Support/iTerm2/Color Schemes/cobalt2.itermcolors"
         load color preset colorFile
       end tell'
+    args:
+        executable: /bin/bash
