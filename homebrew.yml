@@ -8,17 +8,17 @@
     args:
       creates: /opt/homebrew/bin/brew
 
+  - name: Updating Homebrew
+    homebrew:
+      update_homebrew: true
+      upgrade: true
+
   # Required by Lando
   - name: Ensure Rosetta 2 is installed
     shell: |
       /usr/sbin/softwareupdate --install-rosetta --agree-to-license
     args:
       creates: /Library/Apple/usr/share/rosetta
-
-  - name: Updating Homebrew
-    homebrew:
-      update_homebrew: true
-      upgrade: true
 
   - name: Install core packages via brew casks
     community.general.homebrew_cask:
