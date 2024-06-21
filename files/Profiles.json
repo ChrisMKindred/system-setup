@@ -1,4 +1,6 @@
 {
+"Profiles": [
+{
   "Right Option Key Sends" : 0,
   "Tags" : [
 
@@ -423,4 +425,6 @@
     "Green Component" : 0.82745099067687988
   },
   "Custom Directory" : "No"
+}
+]
 }

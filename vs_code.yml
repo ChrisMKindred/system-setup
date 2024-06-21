@@ -106,8 +106,8 @@
 
   - name: Copy JSON profile to DynamicProfiles directory
     copy:
-      src: files/Default.json
-      dest: ~/Library/Application Support/iTerm2/DynamicProfiles/default.json
+      src: files/Profiles.json
+      dest: ~/Library/Application Support/iTerm2/DynamicProfiles/Profiles.json
       mode: '0644'
 
   - name: Reload iTerm2 preferences
