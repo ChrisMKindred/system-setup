@@ -1,30 +1,14 @@
 ---
 - hosts: localhost
   connection: local
-  become: false
-  vars: 
-    install_homebrew_if_missing: false
-
-  pre_tasks:
-  - name: Ensuring Homebrew Is Installed (Apple)
-    stat:
-      path: /opt/homebrew/bin/brew
-    register: homebrew_check
-
-  - name: Fail if homebrew is not installed and install_homebrew_if_missing is False
-    fail: 
-      msg: Homebrew is missing...Install from https://brew.sh/
-    when:
-      - not homebrew_check.stat.exists
-      - not install_homebrew_if_missing
-
-  - name: Installing Homebrew
-    shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    when:
-      - not homebrew_check.stat.exists
-      - install_homebrew_if_missing  
 
   tasks:
+  - name: Ensure Homebrew is installed
+    command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    args:
+      creates: /usr/local/bin/brew
+    become: yes
+
   # Required by Lando
   - name: Ensure Rosetta 2 is installed
     shell: |
