@@ -98,16 +98,16 @@
       owner: "{{ lookup('env', 'USER') }}"
       force: yes
 
-  - name: Ensure iTerm2 color schemes directory exists
+  - name: Ensure iTerm2 color DynamicProfiles directory exists
     file:
-      path: ~/Library/Application\ Support/iTerm2/Color\ Schemes
+      path: ~/Library/Application Support/iTerm2/DynamicProfiles/
       state: directory
       mode: '0755'
 
   - name: Copy JSON profile to DynamicProfiles directory
     copy:
       src: files/Default.json
-      dest: ~/Library/Application\ Support/iTerm2/DynamicProfiles/default.json
+      dest: ~/Library/Application Support/iTerm2/DynamicProfiles/default.json
       mode: '0644'
 
   - name: Reload iTerm2 preferences
