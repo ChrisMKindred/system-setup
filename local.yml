@@ -3,6 +3,8 @@
 - import_playbook: command_line.yml
 - import_playbook: vs_code.yml
 - import_playbook: mac_os_apps.yml
+- import_playbook: zsh.yml
+- import_playbook: dock.yml
 
 
 
