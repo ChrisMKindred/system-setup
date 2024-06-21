@@ -4,7 +4,7 @@
 
   tasks:
   - name: Ensure Homebrew is installed
-    command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     args:
       creates: /usr/local/bin/brew
     become: yes
