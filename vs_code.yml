@@ -104,17 +104,14 @@
       state: directory
       mode: '0755'
 
-  - name: Copy .itermcolors file to target directory
+  - name: Copy JSON profile to DynamicProfiles directory
     copy:
-      src: files/cobalt2.itermcolors
-      dest: ~/Library/Application\ Support/iTerm2/Color\ Schemes/cobalt2.itermcolors
+      src: files/Default.json
+      dest: ~/Library/Application\ Support/iTerm2/DynamicProfiles/default.json
       mode: '0644'
 
-  - name: Import .itermcolors file into iTerm2
-    shell: >
-      osascript -e 'tell application "iTerm2"
-        set colorFile to POSIX file "~/Library/Application Support/iTerm2/Color Schemes/cobalt2.itermcolors"
-        load color preset colorFile
-      end tell'
+  - name: Reload iTerm2 preferences
+    shell: osascript -e 'tell application "iTerm2" to reload preferences'
     args:
-        executable: /bin/bash
+      executable: /bin/bash
+
