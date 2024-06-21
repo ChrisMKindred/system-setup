@@ -85,6 +85,12 @@
       owner: "{{ lookup('env', 'USER') }}"
       force: yes
 
+  - name: Ensure target directory exists
+    file:
+      path: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/snippets/
+      state: directory
+      mode: '0755'
+
   - name: Move VS Code Snippets
     copy:
       src: ./files/vs-code-snippets.code-snippets
