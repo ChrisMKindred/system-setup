@@ -38,6 +38,7 @@
         - postman
         - screenflow
         - lando
+        - local
         - slack
         - tableplus
         - transmit
