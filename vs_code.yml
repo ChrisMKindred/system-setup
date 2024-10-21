@@ -30,18 +30,23 @@
     - bradlc.vscode-tailwindcss
     - breezelin.phpstan
     - chouzz.vscode-better-align
-    - DavidAnson.vscode-markdownlint
-    - DotJoshJohnson.xml
+    - davidanson.vscode-markdownlint
+    - dotjoshjohnson.xml
     - eamodio.gitlens
-    - EditorConfig.EditorConfig
+    - editorconfig.editorconfig
     - formulahendry.auto-close-tag
     - formulahendry.auto-rename-tag
-    - GitHub.codespaces
-    - GitHub.github-vscode-theme
+    - github.codespaces
+    - github.copilot
+    - github.copilot-chat
+    - github.github-vscode-theme
     - hashicorp.terraform
     - jebbs.plantuml
     - johnbillion.vscode-wordpress-hooks
     - mohd-akram.vscode-html-format
+    - ms-azuretools.vscode-docker
+    - ms-playwright.playwright
+    - ms-python.debugpy
     - ms-python.python
     - ms-python.vscode-pylance
     - ms-vscode-remote.remote-containers
@@ -49,16 +54,16 @@
     - naumovs.color-highlight
     - neilbrayfield.php-docblocker
     - phproberto.vscode-php-getters-setters
-    - PKief.material-icon-theme
+    - pkief.material-icon-theme
     - redhat.vscode-yaml
     - sdras.night-owl
-    - SimonSiefke.svg-preview
-    - SimplyDanny.modelica
+    - simonsiefke.svg-preview
+    - simplydanny.modelica
     - streetsidesoftware.code-spell-checker
-    - Tyriar.sort-lines
+    - tyriar.sort-lines
     - valeryanm.vscode-phpsab
     - vincaslt.highlight-matching-tag
-    - Vue.volar
+    - vue.volar
     - wayou.vscode-todo-highlight
     - whatwedo.twig
     - xdebug.php-debug
