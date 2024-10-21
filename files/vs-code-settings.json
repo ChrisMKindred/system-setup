@@ -1,7 +1,7 @@
 {
     "editor.lineHeight": 22,
     "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "editor.fontSize": 13,
     "editor.rulers": [80],
     "editor.insertSpaces": false,
@@ -21,11 +21,8 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "right",
-    "explorer.openEditors.visible": 0,
+    "explorer.openEditors.visible": 1,
     "workbench.settings.editor": "json",
-    "files.exclude": {
-        "**/.git": false
-   },
     "launch": {
         "configurations": [
             {
@@ -103,16 +100,13 @@
     "intelephense.environment.shortOpenTag": false,
     "intelephense.format.braces": "k&r",
     "editor.renderWhitespace": "none",
-    "php.validate.executablePath": "/usr/local/bin/php",
+    "php.validate.executablePath": "/opt/homebrew/bin/php",
     "json.maxItemsComputed": 15000,
     "intelephense.phpdoc.returnVoid": false,
     "php-docblocker.returnVoid": false,
     "php-docblocker.useShortNames": true,
     "workbench.colorTheme": "Night Owl",
     "editor.minimap.enabled": false,
-    "[php]": {
-        "editor.defaultFormatter": "valeryanm.vscode-phpsab"
-    },
     "redhat.telemetry.enabled": false,
     "phpstan.autoloadFile": "",
     "phpstan.configuration": "",
@@ -136,4 +130,7 @@
         "Slic"
     ],
     "diffEditor.ignoreTrimWhitespace": false,
+    "phpsab.snifferShowSources": true,
+    "security.promptForLocalFileProtocolHandling": false,
+    "playwright.reuseBrowser": false,
 }
