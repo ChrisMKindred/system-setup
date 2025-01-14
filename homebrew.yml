@@ -34,11 +34,12 @@
         - google-chrome
         - imageOptim
         - iterm2
-        - orbstack
-        - postman
-        - screenflow
         - lando
         - local
+        - orbstack
+        - postman
+        - prismlauncher
+        - screenflow
         - slack
         - tableplus
         - transmit
